@@ -496,8 +496,8 @@ hr {
 }
 .paradiv {
   padding-left: 60px;
-    padding-top: 10px;
-    padding-bottom: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 .subeducationdiv {
   align-items: center;
@@ -825,8 +825,8 @@ hr {
   flex-direction: column;
   gap: 15px;
 }
-.mailandphone{
-  display:flex;
+.mailandphone {
+  display: flex;
   align-items: center;
   gap: 20px;
 }
@@ -883,7 +883,7 @@ input {
 }
 textarea {
   width: 94%;
-  height: 26%;
+  height: 200px;
   margin: 10px;
   padding: 35px;
   background-color: #666666;
@@ -901,15 +901,16 @@ textarea {
   gap: 20px;
   font-family: poppins;
   width: 33%;
-  height: 9%;
+  height: 10%;
   background-color: #ffffff;
   color: #666666;
-  border: 1px solid;
-  padding-left: 9px;
-  border-color: #ffb400;
-  align-items: center;
-  justify-content: center;
-  display: flex;
+    border: 1px solid;
+    padding-left: 9px;
+    border-color: #ffb400;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    /* margin-top: 2%; */
 }
 .sendbutton1 {
   text-align: center;
@@ -931,6 +932,13 @@ textarea {
   display: none;
 }
 
+.fromdiv {
+  padding-top: 13%;
+}
+.fromchild {
+  height: 65%;
+}
+
 /* ----------------------------------------media tab contact----------------------------------- */
 
 @media (max-width: 1200px) {
@@ -940,7 +948,7 @@ textarea {
   .contactmenu {
     display: none;
   }
-  
+
   .contactsub {
     width: 80%;
     height: 80%;
@@ -950,8 +958,9 @@ textarea {
     margin-top: 20px;
   }
 
-  .fromdiv{
+  .fromdiv {
     padding-bottom: 30px;
+    padding-top: 0;
   }
   .menubarbutton {
     display: flex;
@@ -962,8 +971,10 @@ textarea {
   }
 
   .sendbutton {
-    width: 33%;
-    height: 17%;
+    width: 31%;
+        height: 13%;
+        margin-top: 8%;
+        margin-left: 2%;
   }
   .subchild {
     width: 100%;
@@ -979,7 +990,7 @@ textarea {
     height: 11%;
     font-size: 20px;
   }
-  .contacticon{
+  .contacticon {
     margin-bottom: 30px;
   }
 
@@ -996,6 +1007,9 @@ textarea {
     grid-template-columns: repeat(1, 1fr);
     align-items: center;
     justify-content: center;
+    width: 100%;
+    padding-left: 25px;
+    padding-right: 25px;
   }
   input {
     width: 100%;
@@ -1005,8 +1019,10 @@ textarea {
     height: 80%;
   }
   .sendbutton {
-    width: 58%;
-    height: 12%;
+    width: 57%;
+        height: 10%;
+        margin-top: 20%;
+        margin-left: 11%;
   }
 }
 
@@ -1052,31 +1068,25 @@ textarea {
   gap: 20px;
 }
 
-
 /* -----------------media blog tab----------------- */
-
 
 @media (max-width: 1200px) {
   .blog {
     height: fit-content;
     font-size: 25px;
     padding: 5px;
-}
-.blogdiv {
-display: grid;
-grid-template-columns: repeat(2,1fr);
-gap: 30px;
-
-}
-}
-
-@media (max-width: 600px){
-
+  }
   .blogdiv {
     display: grid;
-    grid-template-columns: repeat(1,1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 30px;
-    
-    }
+  }
+}
 
+@media (max-width: 600px) {
+  .blogdiv {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 30px;
+  }
 }
