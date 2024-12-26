@@ -723,7 +723,9 @@ hr {
   padding-top: 3%;
   padding-left: 15%;
 }
-
+.pro1{
+  height: 215px;
+}
 /* ----------------------------------------media tab portfolio----------------------------------- */
 
 @media (max-width: 1200px) {
@@ -762,9 +764,16 @@ hr {
     font-size: 35px;
     height: fit-content;
   }
+  .pro1{
+    height: 160px;
+  }
 }
 
 @media (max-width: 600px) {
+
+  .pro1{
+    height: 123px;
+  }
   .portfolio {
     width: 100%;
     height: 10%;
