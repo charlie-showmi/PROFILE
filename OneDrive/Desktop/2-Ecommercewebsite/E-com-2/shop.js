@@ -41,6 +41,8 @@ console.log(cartProductArray);
 
                 localStorage.setItem("cartProducts",JSON.stringify(cartProductArray))
 
+updateCartTotal()
+                
             }
             
 
@@ -48,3 +50,21 @@ console.log(cartProductArray);
         });
     });
 // });
+
+
+// Update subtotal when quantity changes
+document.querySelectorAll("#cart input[type='number']").forEach(input => {
+    input.addEventListener('change', updateCartTotal);
+});
+
+function updateCartTotal() {
+    let total = 0;
+    document.querySelectorAll("#cart tbody tr").forEach(row => {
+        const price = parseFloat(row.children[3].textContent.replace('$', ''));
+        const quantity = row.children[4].querySelector('input').value;
+        const subtotal = price * quantity;
+        row.children[5].textContent = `$${subtotal.toFixed(2)}`;
+        total += subtotal;
+    });
+    document.querySelector("#subtotal td:last-child strong").textContent = `$${total.toFixed(2)}`;
+}
