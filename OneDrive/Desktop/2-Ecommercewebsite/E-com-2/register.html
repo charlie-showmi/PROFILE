@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register Form</title>
+    <link rel="icon" type="image/png" href="./img/loginlogo.webp" style="width: 32px; height: 32px;">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;           
+            background: url('./img/hero4.png') no-repeat center center fixed; 
+            background-size: cover;
+        }
+
+        .login-container {
+            width: 300px;
+            padding: 20px;
+            background: #060404;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .login-container h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #ffffff;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            color: white;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+            margin: 5px;
+        }
+
+        .btn {
+            width: 80%;
+            padding: 10px;
+            font-size: 15px;
+            background-color: #fcfcff;
+            color: #0a0a0a;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 4px;
+            margin-left: 30px;
+        }
+
+        .btn:hover {
+            background-color: #007bff;
+            color: #ccc;
+        }
+
+        .forgot-password {
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .forgot-password a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        .forgot-password a:hover {
+            text-decoration:solid;
+            color: #ff0000;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="login-container">
+        <h2>Register</h2>
+        <div id="login-form">
+            <div class="form-group">
+                <input type="email" class="re-email" placeholder="Enter your email" required>
+                <input type="password" class="re-password" placeholder="Enter your password" required>
+                <input type="text" class="re-confirmPassword" placeholder="Enter your confirm password" required>
+           <p class="errMsg"></p>
+            </div>
+            <button class="btn" onclick="module.register()">Register</button>
+        </div>
+        <div class="forgot-password">
+            <a href="./index.html">already have an account ? Login</a>
+        </div>
+    </div>
+    
+    <script type="module" src="./script2.js"></script>
+    <script src="./module.js"></script>
+</body>
+
+</html>
